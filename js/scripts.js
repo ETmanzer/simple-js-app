@@ -1,6 +1,6 @@
 // Stylelint keeps telling me whatever the first thing in the Line is an error.
-let myName = "Evan";
+let myName = 'Evan';
 document.write(myName);
-/*myName = 'John Doe';
-document.write(myName);*/
-alert('Hello world!')
+alert('Hello world!');
+favoriteFood = 'Snow Crab';
+document.write(favoriteFood);
