@@ -1,6 +1,7 @@
-// Stylelint keeps telling me whatever the first thing in the Line is an error.
-let myName = 'Evan';
-document.write(myName);
-alert('Hello world!');
-favoriteFood = 'Snow Crab';
-document.write(favoriteFood);
+// height in m
+let pokemonList = [
+    {name: "Bulbasaur", type: ["grass","poison"], height: 0.7},
+    {name: "Ivysaur", type: ["grass","poison"], height: 1},
+    {name: "Venosaur", type: ["grass","poison"], height: 2}
+];
+// Data gathered from https://pokedex.org/
