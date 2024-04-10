@@ -6,9 +6,7 @@ let pokemonList = [
 ];
 
 for (let i=0; i < pokemonList.length; i++){
+    let result = pokemonList[i].height >= 2 ? ' -Wow, that\'s big!' : '';
     document.write('<p>' + pokemonList[i].name + ' (height: ' + pokemonList[i].height + ')</p>');// have to figure out how to line break
-    if (pokemonList[i].height > 1) {
-        document.write(pokemonList[i].height + ' Wow, that\'s big!')
-    }
 }
 // Data gathered from https://pokedex.org/
