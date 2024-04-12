@@ -5,8 +5,7 @@ let pokemonList = [
     {name: 'Venosaur', type: ['grass','poison'], height: 2}
 ];
 
-for (let i=0; i < pokemonList.length; i++){
-    let result = pokemonList[i].height >= 2 ? ' -Wow, that\'s big!' : '';
-    document.write('<p>' + pokemonList[i].name + ' (height: ' + pokemonList[i].height + ')</p>');// have to figure out how to line break
-}
+pokemonList.forEach(function(pokemon) {
+    document.write('<p>' + pokemon.name + ' (height: ' + pokemon.height + ')</p>');
+});
 // Data gathered from https://pokedex.org/
