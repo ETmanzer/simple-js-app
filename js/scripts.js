@@ -20,7 +20,9 @@ let pokemonRepository = (function () {
     };
 })();
 
-pokemonList.forEach(function(pokemon) {
+let pokemons = pokemonRepository.getAll();
+
+pokemons.forEach(function(pokemon) {
     document.write('<p>' + pokemon.name + ' (height: ' + pokemon.height + ')</p>');
 });
 
