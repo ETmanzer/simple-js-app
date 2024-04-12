@@ -5,6 +5,19 @@ let pokemonRepository = (function () {
         {name: 'Ivysaur', type: ['grass','poison'], height: 1},
         {name: 'Venosaur', type: ['grass','poison'], height: 2}
     ];
+
+    function add(pokemon) {
+        pokemonList.push(pokemon);
+      }
+    
+    function getAll() {
+        return pokemonList;
+    }
+    
+    return {
+        add: add,
+        getAll: getAll
+    };
 })();
 
 pokemonList.forEach(function(pokemon) {
