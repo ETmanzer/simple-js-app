@@ -30,7 +30,8 @@ pokemons.forEach(function(pokemon) {
     let button = document.createElement('button');
     button.innerText='Bulbasaur';
     button.classList.add('button-class');
-    pokemonList.appendChild(button);
+    listItem.appendChild(button);
+    pokemonList.appendChild(listItem);
 });
 
 
