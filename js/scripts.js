@@ -25,9 +25,11 @@ pokemonRepository.add({name: 'Charmander', type: ['fire'], height: 0.6});
 let pokemons = pokemonRepository.getAll();
 
 pokemons.forEach(function(pokemon) {
-    document.querySelector('ul');
+    let pokemonList = document.querySelector('.pokemon-list');
 });
 
-let listItem = document.createElement(li);
+let listItem = document.createElement('li');
+let button = document.createElement('button');
+button.innertext='pokemonList'
 
 // Data gathered from https://pokedex.org/
