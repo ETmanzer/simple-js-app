@@ -26,10 +26,14 @@ let pokemons = pokemonRepository.getAll();
 
 pokemons.forEach(function(pokemon) {
     let pokemonList = document.querySelector('.pokemon-list');
+    let listItem = document.createElement('li');
+    let button = document.createElement('button');
+    button.innerText='Bulbasaur';
+    button.classList.add('button-class')
 });
 
-let listItem = document.createElement('li');
-let button = document.createElement('button');
-button.innertext='pokemonList'
+
+
+
 
 // Data gathered from https://pokedex.org/
