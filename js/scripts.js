@@ -26,8 +26,8 @@ let pokemons = pokemonRepository.getAll();
 
 pokemons.forEach(function(pokemon) {
     document.querySelector('ul');
-    
 });
 
+let listItem = document.createElement(li);
 
 // Data gathered from https://pokedex.org/
