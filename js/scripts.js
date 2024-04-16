@@ -29,7 +29,8 @@ pokemons.forEach(function(pokemon) {
     let listItem = document.createElement('li');
     let button = document.createElement('button');
     button.innerText='Bulbasaur';
-    button.classList.add('button-class')
+    button.classList.add('button-class');
+    pokemonList.appendChild(button);
 });
 
 
