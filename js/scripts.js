@@ -74,12 +74,11 @@ let pokemonRepository = (function () {
     };
 })();
 
-pokemonRepository.add({name: 'Charmander', type: ['fire'], height: 0.6});
-
-console.log(pokemonRepository.getAll());
-  
-pokemonRepository.getAll().forEach(function (pokemon) {
-  pokemonRepository.addListItem(pokemon);
+pokemonRepository.loadList().then(function() {
+    // Now the data is loaded!
+    pokemonRepository.getAll().forEach(function(pokemon){
+      pokemonRepository.addListItem(pokemon);
+    });
 });
 
 
