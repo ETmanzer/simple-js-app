@@ -42,11 +42,10 @@ let pokemonRepository = (function () {
 
 pokemonRepository.add({name: 'Charmander', type: ['fire'], height: 0.6});
 
-let pokemons = pokemonRepository.getAll();
-
-pokemons.forEach(function(pokemon) {
-    
-    pokemonRepository.addListItem(pokemon);
+console.log(pokemonRepository.getAll());
+  
+pokemonRepository.getAll().forEach(function (pokemon) {
+  pokemonRepository.addListItem(pokemon);
 });
 
 
