@@ -1,10 +1,8 @@
 // height in m
 let pokemonRepository = (function () {
-    let pokemonList = [
-        {name: 'Bulbasaur', type: ['grass','poison'], height: 0.7},
-        {name: 'Ivysaur', type: ['grass','poison'], height: 1},
-        {name: 'Venosaur', type: ['grass','poison'], height: 2},
-    ];
+    let pokemonList = [];
+    let apiUrl = 'https://pokeapi.co/api/v2/pokemon/?limit=150';
+       
 
     function add(pokemon) {
         if (
