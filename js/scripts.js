@@ -3,12 +3,21 @@ let pokemonRepository = (function () {
     let pokemonList = [
         {name: 'Bulbasaur', type: ['grass','poison'], height: 0.7},
         {name: 'Ivysaur', type: ['grass','poison'], height: 1},
-        {name: 'Venosaur', type: ['grass','poison'], height: 2}
+        {name: 'Venosaur', type: ['grass','poison'], height: 2},
     ];
 
     function add(pokemon) {
-        pokemonList.push(pokemon);
-      }
+        if (
+            typeof pokemon === "object" &&
+            "name" in pokemon &&
+            "type" in pokemon &&
+            "height" in pokemon &&
+        ) {
+            pokemonList.push(pokemon);
+        }else{
+            console.log("pokemon is not correct")
+        }
+    }
     
     function getAll() {
         return pokemonList;
