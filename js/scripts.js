@@ -14,7 +14,7 @@ let pokemonRepository = (function () {
             "height" in pokemon &&
         ) {
             pokemonList.push(pokemon);
-        }else{
+        } else {
             console.log("pokemon is not correct")
         }
     }
@@ -23,7 +23,7 @@ let pokemonRepository = (function () {
         return pokemonList;
     }
     
-    function addListItem() {
+    function addListItem(pokemon) {
         let pokemonList = document.querySelector('.pokemon-list');
         let listItem = document.createElement('li');
         let button = document.createElement('button');
