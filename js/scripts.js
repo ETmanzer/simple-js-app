@@ -8,14 +8,14 @@ let pokemonRepository = (function () {
 
     function add(pokemon) {
         if (
-            typeof pokemon === "object" &&
-            "name" in pokemon &&
-            "type" in pokemon &&
-            "height" in pokemon &&
+          typeof pokemon === "object" &&
+          "name" in pokemon &&
+          "type" in pokemon &&
+          "height" in pokemon
         ) {
-            pokemonList.push(pokemon);
+          repository.push(pokemon);
         } else {
-            console.log("pokemon is not correct")
+          console.log("pokemon is not correct");
         }
     }
     
