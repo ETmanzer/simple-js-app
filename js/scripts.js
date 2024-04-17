@@ -34,6 +34,10 @@ let pokemonRepository = (function () {
         button.addEventListener('click', showDetails);
     }
 
+    function showDetails(pokemon){
+        console.log();
+    }
+    
     return {
         add: add,
         getAll: getAll,
