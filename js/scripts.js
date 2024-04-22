@@ -75,7 +75,50 @@ let pokemonRepository = (function () {
       });
   }
 
-    
+  function showDetails(pokemon) {
+    // Call loadDetails to fetch additional details for the pokemon
+    loadDetails(pokemon)
+        .then(function () {
+            modalName.innerText = "Name: " + pokemon.name;
+
+            // Check if the 'types' property exists and is an array
+            if (Array.isArray(pokemon.types) && pokemon.types.length > 0) {
+                modalTypes.innerText = "Types: " + pokemon.types.join(", ");
+            } else {
+                modalTypes.innerText = "Types: Unknown";
+            }
+
+            modalHeight.innerText = "Height: " + pokemon.height;
+
+            // Create an img element
+            let img = document.createElement('img');
+            img.src = pokemon.imageUrl; // Set the src attribute to the URL of the pokemon's image
+            img.classList.add('pokemon-image'); // Optional: Add a CSS class to style the image if needed
+
+            // Append the img element to the modal content
+            let modalContent = document.querySelector('.modal-content');
+            modalContent.appendChild(img);
+            
+            modal.style.display = "block";
+        })
+        .catch(function (error) {
+            console.error(error);
+        });
+
+    // Close modal when clicking on the close button
+    var closeBtn = document.getElementsByClassName("close")[0];
+    closeBtn.onclick = function () {
+        modal.style.display = "none";
+    }
+
+    // Close modal when clicking outside of it
+    window.onclick = function (event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+}
+
     return {
         add: add,
         getAll: getAll,
