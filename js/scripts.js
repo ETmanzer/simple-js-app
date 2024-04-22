@@ -60,20 +60,21 @@ let pokemonRepository = (function () {
         })
     }
 
-    function loadDetails(item) {
-        return fetch(url).then(function (response) {
-          return response.json();
-        }).then(function (details) {
-          // Now we add the details to the item
-          item.imageUrl = details.sprites.front_default;
-          item.height = details.height;
-          item.types = details.types.map(function(type) {
-              return type.type.name;
-          });
-        }).catch(function (e) {
-          console.error(e);
+    function loadDetails(pokemon) {
+      return fetch(pokemon.detailsUrl).then(function (response) {
+        return response.json();
+      }).then(function (details) {
+        // Now we add the details to the pokemon object
+        pokemon.imageUrl = details.sprites.front_default;
+        pokemon.height = details.height;
+        pokemon.types = details.types.map(function(type) {
+            return type.type.name;
         });
-      }
+      }).catch(function (e) {
+        console.error(e);
+      });
+  }
+
     
     return {
         add: add,
