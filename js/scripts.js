@@ -2,7 +2,7 @@
 let pokemonRepository = (function() {
   let  apiUrl = 'https://pokeapi.co/api/v2/pokemon/?limit=150';
   let pokemonListElement = document.getElementById('pokemon-list');
-  // let pokemonModal = document.getElementById('pokemonModal');
+  let pokemonModal = document.getElementById('pokemonModal');
   let modalName = document.getElementById('modalName');
   let modalHeight = document.getElementById('pokemonModalHeight');
   let modalWeight = document.getElementById('pokemonModalWeight');
