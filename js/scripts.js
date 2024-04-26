@@ -26,7 +26,7 @@ window.onload = function() {
       }
 
       function addListItem(pokemon) {
-          let pokemonListElement = document.querySelector('.pokemon-list');
+          let pokemonListElement = document.querySelector('#pokemon-list');
           let listItem = document.createElement('li');
           let button = document.createElement('button');
           button.innerText = pokemon.name;
@@ -123,7 +123,7 @@ window.onload = function() {
 
     // Initialize the Bootstrap modal
     initModal();
-    
+
       return {
           add: add,
           getAll: getAll,
