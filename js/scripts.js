@@ -117,6 +117,13 @@ window.onload = function() {
       }
     }
 
+      function initModal() {
+        $('#pokemonModal').modal();
+    }
+
+    // Initialize the Bootstrap modal
+    initModal();
+    
       return {
           add: add,
           getAll: getAll,
