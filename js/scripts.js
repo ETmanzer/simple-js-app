@@ -69,7 +69,7 @@ pokemonRepository.fetchPokemonList()
   });
 
 
-return {
+// return {
       //   add: add,
       //   getAll: getAll,
       //   addListItem: addListItem,
