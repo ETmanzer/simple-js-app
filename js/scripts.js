@@ -24,12 +24,6 @@ let pokemonRepository = (function () {
         return pokemonList;
     }
 
-    // function showDetails(pokemon){
-    //   console.log("Name: " + pokemon.name);
-    //   console.log("Types: " + pokemon.types);
-    //   console.log("Height: " + pokemon.height);
-    // }
-
     function addListItem(pokemon) {
         let pokemonListElement = document.querySelector('.pokemon-list');
         let listItem = document.createElement('li');
