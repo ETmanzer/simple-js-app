@@ -84,13 +84,16 @@ let pokemonRepository = (function () {
 
             modalHeight.innerText = "Height: " + pokemon.height;
 
+            // Clear previous content
+            let modalContent = document.querySelector('.modal-content');
+            modalContent.innerHTML = ''; // Remove all child elements
+
             // Create an img element
             let img = document.createElement('img');
             img.src = pokemon.imageUrl; // Set the src attribute to the URL of the pokemon's image
             img.classList.add('pokemon-image'); // Optional: Add a CSS class to style the image if needed
 
             // Append the img element to the modal content
-            let modalContent = document.querySelector('.modal-content');
             modalContent.appendChild(img);
             
             modal.style.display = "block";
@@ -111,7 +114,7 @@ let pokemonRepository = (function () {
             modal.style.display = "none";
         }
     }
-}
+  }
 
     return {
         add: add,
