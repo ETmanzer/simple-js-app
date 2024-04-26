@@ -1,6 +1,6 @@
 // height in m
 let pokemonRepository = (function() {
-  let  apiUrl = 'https://pokeapi.co/api/v2/pokemon/?limit=150';
+  let apiUrl = 'https://pokeapi.co/api/v2/pokemon/?limit=150';
   let pokemonListElement = document.getElementById('pokemon-list');
   let pokemonModal = document.getElementById('pokemonModal');
   let modalName = document.getElementById('modalName');
@@ -37,32 +37,32 @@ function showPokemonDetails(pokemon) {
   modalName.innerText = pokemon.name;
 
   fetchPokemonDetails(pokemon.url)
-      .then(data => {
-          modalHeight.innerText = `Height: ${data.height}`;
-          modalWeight.innerText = `Weight: ${data.weight}`;
+    .then(data => {
+      modalHeight.innerText = `Height: ${data.height}`;
+      modalWeight.innerText = `Weight: ${data.weight}`;
 
-          let types = data.types.map(type => type.type.name).join(', ');
-          modalTypes.innerText = `Types: ${types}`;
+      let types = data.types.map(type => type.type.name).join(', ');
+      modalTypes.innerText = `Types: ${types}`;
 
-          let abilities = data.abilities.map(ability => ability.ability.name).join(', ');
-          modalAbilities.innerText = `Abilities: ${abilities}`;
+      let abilities = data.abilities.map(ability => ability.ability.name).join(', ');
+      modalAbilities.innerText = `Abilities: ${abilities}`;
 
-            // Fetch the image URL
-          let imageUrl = data.sprites.front_default;
+      // Fetch the image URL
+      let imageUrl = data.sprites.front_default;
 
-            // Create an img element and set its src attribute to the image URL
-          let imageElement = document.createElement('img');
-          imageElement.src = imageUrl;
-          imageElement.classList.add('img-fluid'); // Bootstrap class for responsive images
+      // Create an img element and set its src attribute to the image URL
+      let imageElement = document.createElement('img');
+      imageElement.src = imageUrl;
+      imageElement.classList.add('img-fluid'); // Bootstrap class for responsive images
 
-            // Clear any existing image in the modal and append the new image
-          let modalBody = document.querySelector('.modal-body');
-          modalBody.innerHTML = ''; // Clear existing content
-          modalBody.appendChild(imageElement);
+      // Clear any existing image in the modal and append the new image
+      let modalBody = document.querySelector('.modal-body');
+      modalBody.innerHTML = ''; // Clear existing content
+      modalBody.appendChild(imageElement);
 
-          $('#pokemonModal').modal('show');
+      $('#pokemonModal').modal('show');
     });
-}
+  }
 
   return {
       fetchPokemonList: fetchPokemonList,
