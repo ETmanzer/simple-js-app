@@ -125,10 +125,12 @@ window.onload = function() {
     initModal();
 
       return {
-          add: add,
-          getAll: getAll,
-          loadList: loadList,
-          loadDetails: loadDetails
+        add: add,
+        getAll: getAll,
+        addListItem: addListItem,
+        loadList: loadList,
+        loadDetails: loadDetails,
+        showDetails: showDetails,
       };
   })();
 
